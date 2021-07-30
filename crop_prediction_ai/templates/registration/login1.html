@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class='container'>
+		<form method='POST'>
+			{% csrf_token %}
+			{% if form.non_field_errors %}
+			<div class='alert alert-danger'>{{ form.non_field_errors }}</div>
+			{% endif %}
+			{% for field in form %}
+				<div class='form-floating mb-3'>
+					{{ field.errors }}
+					{{ field }}
+				</div>
+			{% endfor %}
+			<button class="btn btn-success" type="submit">Login</button>
+		</form>
+	</div>
+{% endblock %}

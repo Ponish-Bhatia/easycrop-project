@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container text-center'>
+	<div class="alert alert-primary"><h1>Create Advertisement</h1></div>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{% load widget_tweaks %}
+		{% for formfield in form %}
+		<div class='form-floating mb-3'>
+			{{ formfield.errors }}
+			{% render_field formfield placeholder="o" class="form-control" %}
+			{{ formfield.label_tag }}
+		</div>
+		{% endfor %}
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+<!-- <div class='container'>
+  {{ error }}
+	<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div> -->
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<br>
+<br>
+<br>
+<div class='container text-center'>
+
+	<div class="alert alert-primary"><h1>Easy Crop</h1></div>
+	<h3>The Crop Predictor. This is a webapp to help farmers. It can predict your crop with some inputs.</h3>
+<!-- 	<iframe width="560" height="315" src="https://www.youtube.com/embed/LBIvBgmP-8g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<br>
+	<a href="{% url 'predictcrop' %}"><button class='btn btn-primary'>Start</button></a>
+	<br>
+	<br>
+	<br>
+<img src="{% static 'logo.png' %}">
+</div>
+{% endblock %}

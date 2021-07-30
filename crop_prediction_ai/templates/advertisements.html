@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container text-center'>
+  <div class="alert alert-primary"><h1>Advertisements</h1></div>
+{% load static %}
+<div class='row'>
+{% for ad in ads %}
+<div class='col-sm-3'>
+<div class="card" style="width: 18rem;">
+  <img src="../{{ ad.image }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ ad.title }}</h5>
+    <p class="card-text">{{ ad.description }}</p>
+    <h6>{{ ad.currency }} {{ ad.cost }}</h6>
+    <a href="{% url 'hey' ad.id %}" class='btn btn-success'>Details...</a>
+  </div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

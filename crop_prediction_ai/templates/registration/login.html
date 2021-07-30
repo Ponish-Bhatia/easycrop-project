@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class='container text-center'>
+		<div class="alert alert-primary"><h1>Login</h1></div>
+		<form method='POST'>
+			{% csrf_token %}
+			{% load widget_tweaks %}
+			{% if form.non_field_errors %}
+			<div class='alert alert-danger'>{{ form.non_field_errors }}</div>
+			{% endif %}
+			{% for field in form %}
+				<div class='form-floating mb-3'>
+					{{ field.errors }}
+					{% render_field field placeholder='P' class='form-control' %}
+					{{ field.label_tag }}
+				</div>
+			{% endfor %}
+			<button class="btn btn-success" type="submit">Login</button>
+		</form>
+	</div>
+{% endblock %}
