@@ -61,6 +61,7 @@
         </li>
       </ul>
       {% if user.is_authenticated %}
+      <font color='#ffffff' face='comic sans ms'>Signed in as {{ request.user }}</font>
       <a class="p-2 text-light nav-link" href="{% url 'logout' %}">Logout</a>
       {% else %}
       <a class="p-2 text-light nav-link" href="{% url 'login' %}">Login</a>
