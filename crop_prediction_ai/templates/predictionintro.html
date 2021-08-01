@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class='container text-center'>
+  <div class="alert alert-primary" style="background-color:#e8ffd1;"><font color='#2c691f;'><h1>The Crop Predictor</h1></font></div>
+	<h2>Our main goal is to help farmers. This section of the website can give you immaculate predictions on what crop best suits you farming land. All you need to know to use it is the Nitrogen, Phosphorus nad Potassium composiotion of your soil(in ppm) and the temperature, humidity, rainfall and the pH of your soil in that season. Click the button below to proceed.</h2>
+<br>
+  <a href="{% url 'predictcrop' %}" class='btn btn-primary'>Click here to proceed...</a>
+</div>
+{% endblock %}

@@ -104,3 +104,6 @@ def createad(request):
 
 def bmc(request):
 	return render(request, 'BMC.html')
+
+def predictionintro(request):
+	return render(request, 'predictionintro.html')

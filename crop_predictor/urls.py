@@ -32,5 +32,6 @@ urlpatterns = [
     path('signup', views.SignUp.as_view(success_url=reverse_lazy('home')), name='signup'),
     path('logout', vs.LogoutView.as_view(), name='logout'),
     path('createad/', views.createad, name='create'),
-    path('bmc/', views.bmc, name='bmcanvas')
+    path('bmc/', views.bmc, name='bmcanvas'),
+    path('predictionintro/', views.predictionintro, name='predictionintro'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

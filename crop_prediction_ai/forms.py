@@ -36,8 +36,9 @@ class CropPredictionForm(forms.ModelForm):
 class CreateAdForm(forms.ModelForm):
 	class Meta():
 		model = advertisement
-		fields = ['title','description','image','cost', 'currency', 'address']
+		fields = ['title','description','image','cost', 'currency', 'address', 'payment_method', 'payment_link', 'country_call_code', 'contact_Number']
 		labels={
 					'cost':'cost(for 1 Kg)',
 					'currency':'specify your currency',
+					'contact_Number':'Contact Number (include area code if any)'
 				}
